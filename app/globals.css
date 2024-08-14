@@ -1,0 +1,530 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* //{--------------BUTTONS-------------- */
+.btn-focus {
+  @apply focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800;
+}
+
+.btn {
+  @apply text-white text-center inline-block   font-medium rounded text-sm px-[13.5px] py-[6px] cursor-pointer  focus:outline-none;
+}
+
+.btn-link {
+  @apply inline-block;
+}
+
+.btn-xs {
+  @apply text-xs  px-[9px] py-[4px];
+}
+.btn-sm {
+  @apply text-sm  px-[9px] py-[4.5px];
+}
+
+.btn-lg {
+  @apply text-base px-5 py-3;
+}
+.btn-xl {
+  @apply text-base px-6 py-3.5;
+}
+
+.btn-square {
+  @apply rounded-none;
+}
+.btn-pill {
+  @apply rounded-full;
+}
+
+.btn-primary {
+  @apply bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700;
+}
+.btn-secondary {
+  @apply bg-gray-600 hover:bg-gray-800 dark:bg-gray-600 dark:hover:bg-gray-700;
+}
+.btn-info {
+  @apply bg-[#17a2b8] hover:bg-[#429dac];
+}
+.btn-danger {
+  @apply bg-red-700 hover:bg-red-800 dark:bg-red-600 dark:hover:bg-red-700;
+}
+.btn-success {
+  @apply bg-green-700 hover:bg-green-800 dark:bg-green-600 dark:hover:bg-green-700;
+}
+.btn-warning {
+  @apply text-black bg-yellow-500 hover:bg-yellow-600 dark:bg-yellow-600 dark:hover:bg-yellow-700;
+}
+.btn-purple {
+  @apply bg-purple-700 hover:bg-purple-800 dark:bg-purple-600 dark:hover:bg-purple-700;
+}
+.btn-dark {
+  @apply bg-gray-800 hover:bg-gray-900 dark:bg-gray-600 dark:hover:bg-gray-700;
+}
+.btn-light {
+  @apply text-black  bg-white border border-gray-300 hover:bg-gray-100 dark:bg-gray-100 dark:hover:bg-gray-200;
+}
+
+.btn-primary-outline {
+  @apply text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800  dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800;
+}
+.btn-secondary-outline {
+  @apply text-gray-900 bg-white border border-gray-900 hover:text-white hover:bg-gray-900;
+}
+.btn-info-outline {
+  @apply text-[#17a2b8] bg-white border border-[#17a2b8] hover:text-white hover:bg-[#17a2b8];
+}
+.btn-danger-outline {
+  @apply text-red-700 bg-white border border-red-700 hover:bg-red-700 hover:text-white;
+}
+.btn-success-outline {
+  @apply text-green-700 bg-white border border-green-700 hover:bg-green-700 hover:text-white;
+}
+.btn-warning-outline {
+  @apply text-yellow-500 bg-white border border-yellow-500 hover:bg-yellow-500 hover:text-black;
+}
+.btn-purple-outline {
+  @apply text-purple-700 bg-white border border-purple-600 hover:bg-purple-700 hover:text-white;
+}
+.btn-dark-outline {
+  @apply text-gray-900 bg-white border border-gray-900 hover:bg-gray-900 hover:text-white;
+}
+.btn-light-outline {
+  @apply text-white bg-gray-900 border border-gray-900 hover:text-gray-900 hover:bg-white;
+}
+/* //---Navbar */
+.navLink {
+  @apply text-sm text-gray-700 hover:text-[#e6272d] w-full h-full  font-sans font-semibold 
+    whitespace-nowrap px-2 lg:px-2 xl:px-4   uppercase;
+}
+
+.navlinkDownIcon {
+  @apply ml-[4px] mb-1;
+}
+
+.navLinkInDrop {
+  @apply px-4 py-2 pb-4 hover:text-[#e6272d]  border-b-[1px] font-sans  border-solid  block whitespace-nowrap;
+}
+.navLinkMobile {
+  @apply text-sm  pr-2 text-gray-700 hover:text-inherit  font-sans font-semibold  uppercase;
+}
+
+.mobileDropDownLink {
+  @apply px-4 py-2 pb-[3px] hover:text-[#e6272d]  block whitespace-nowrap  text-gray-900;
+}
+
+.dropDownLinks {
+  visibility: hidden;
+}
+
+.dropDownContainer:hover .dropDownLinks {
+  visibility: visible;
+  background-color: #ffffff;
+  /* box-shadow: rgba(0, 0, 0, 0.537) 0px 2px 2px; */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  z-index: 1;
+}
+
+/* =======================================================================
+        ANIMATIONS
+   ======================================================================= */
+
+/* --SPRING */
+
+@keyframes xspringTrans300pxFromBelow15 {
+  0% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.xspringTrans300pxFromBelow15 {
+  animation: 1.5s xspringTrans300pxFromBelow15
+    cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.xspringTrans300pxFromBelow20 {
+  animation: 2s xspringTrans300pxFromBelow15
+    cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes xspringTrans300pxFromRight15 {
+  0% {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.xspringTrans300pxFromRight15 {
+  animation: 1.5s xspringTrans300pxFromRight15
+    cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.xspringTrans300pxFromRight20 {
+  animation: 2s xspringTrans300pxFromRight15
+    cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+@keyframes xspringTrans300pxFromLeft15 {
+  0% {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.xspring300pxFromLeft15 {
+  animation: 1.5s xspring300pxFromLeft15 cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.xspring300pxFromLeft20 {
+  animation: 2s xspring300pxFromLeft15 cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+/* --TWEEN */
+@keyframes xtweenTrans300pxFromBelow15 {
+  0% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.xtweenTrans300pxFromBelow15 {
+  animation: 1.5s xtweenTrans300pxFromBelow15;
+}
+.xtweenTrans300pxFromBelow20 {
+  animation: 2s xtweenTrans300pxFromBelow15;
+}
+
+@keyframes xtweenTrans300pxFromRight15 {
+  0% {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.xtweenTrans300pxFromRight15 {
+  animation: 1.5s xtweenTrans300pxFromRight15;
+}
+.xtweenTrans300pxFromRight20 {
+  animation: 2s xtweenTrans300pxFromRight15;
+}
+
+@keyframes xtweenTrans300pxFromLeft15 {
+  0% {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.xtweenTrans300pxFromLeft15 {
+  animation: 1.5s xtweenTrans300pxFromLeft15;
+}
+.xtweenTrans300pxFromLeft20 {
+  animation: 2s xtweenTrans300pxFromLeft15;
+}
+
+/* =======================================================================
+     NOSCROLLBAR
+   ======================================================================= */
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/*  //--------------BUTTONS--------------} */
+.bg-primary-blue1 {
+  background-color: #337ab7;
+}
+.bg-primary-blue2 {
+  background-color: #1a2742;
+}
+.bg-primary-blue3 {
+  background-color: #15222e;
+}
+.bg-primary-blue4 {
+  background-color: #140a46;
+}
+
+.text-primary-blue5 {
+  color: #007bff;
+}
+.bg-secondary-red1 {
+  background-color: #e6272d;
+}
+.text-secondary-red1 {
+  color: #e6272d;
+}
+
+.text-red2 {
+  color: #ef4438;
+}
+
+.text-primary-muted1 {
+  color: #b2c1d0;
+}
+
+.bg-primary-yellow1 {
+  background-color: #f8f4e1;
+}
+
+.bg-yellow-muted {
+  background-color: #fdfbf0;
+}
+
+/* //{--------------SHADOWS-------------- */
+.shadow-t {
+  box-shadow: 0 -5px 5px -5px #333;
+}
+
+.shadow-b {
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-r {
+  box-shadow: 0 5px 5px -5px #333;
+}
+
+.shadow-l {
+  box-shadow: 5px 0 5px -5px #333;
+}
+
+.shadow-all {
+  box-shadow: 0 0 5px #333;
+}
+
+.shadow-admissionCard-icon {
+  box-shadow: rgba(0, 0, 0, 0.45) 0 20px 69px;
+}
+
+.parent-element {
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+}
+
+.clipped-element {
+  clip-path: polygon(0 0, 50% 0, 100% 50%, 50% 100%, 0 100%, 0, 50% 50%);
+}
+
+/* //--------------------------------------------------} */
+
+/* //{------------SWIPER---------------- */
+.swiper-button-next {
+  display: none !important;
+  opacity: 0 !important;
+}
+.swiper-button-prev {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+.swiper-container,
+.swiper,
+.swiper-slider {
+  /* z-index: -99 !important; */
+}
+
+/* //--------------------ADMISSION PROCEDURE PAGE------------------------------} */
+
+.admitCardParent {
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.admitCardBgImageContainer1 {
+  background-image: url("../public/icon-bg-1.png");
+  transition: background-image 0.3s ease;
+}
+.admitCardBgImageContainer2 {
+  background-image: url("../public/icon-bg-2.png");
+  transition: background-image 0.3s ease;
+}
+
+.admitCardParent:hover .admitCardBgImageContainer2 {
+  z-index: 10;
+  height: 105px;
+  transition: height 0.3s ease; /* Smooth transition for height property */
+}
+
+.admitCardParent:hover .admitIcon1 {
+  color: white;
+}
+.admitCardParent:hover .admissionProcStep1 {
+  color: white;
+}
+.admissionProcStep1:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(0deg, #1471e2, #0551af 100%);
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  transform: scale(0, 0);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.admitCardParent:hover .admissionProcStep1:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(0deg, #1471e2, #0551af 100%);
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.apIcon1 {
+  background-image: url("../public/survey-1.svg");
+}
+.admitCardParent:hover .apIcon1 {
+  background-image: url("../public/survey-1h.png");
+}
+.apIcon2 {
+  background-image: url("../public/designing-1.svg");
+}
+.admitCardParent:hover .apIcon2 {
+  background-image: url("../public/designing-1h.svg");
+}
+.apIcon3 {
+  background-image: url("../public/distribution-1.svg");
+}
+.admitCardParent:hover .apIcon3 {
+  background-image: url("../public/distribution-1h.svg");
+}
+.apIcon4 {
+  background-image: url("../public/consulting-1.svg");
+}
+
+.admitCardParent:hover .apIcon4 {
+  background-image: url("../public/consulting-1h.svg");
+}
+
+/* //--------------------------------------------------} */
+/* //{--------------LOADIND  page-------------- */
+.my_loader {
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l5 1s infinite linear alternate;
+}
+@keyframes l5 {
+  0% {
+    box-shadow: 20px 0 #000, -20px 0 #0002;
+    background: #000;
+  }
+  33% {
+    box-shadow: 20px 0 #000, -20px 0 #0002;
+    background: #0002;
+  }
+  66% {
+    box-shadow: 20px 0 #0002, -20px 0 #000;
+    background: #0002;
+  }
+  100% {
+    box-shadow: 20px 0 #0002, -20px 0 #000;
+    background: #000;
+  }
+}
+/* //{---------------------------- */

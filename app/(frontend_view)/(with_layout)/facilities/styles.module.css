@@ -1,0 +1,94 @@
+/* //--------------------Facilities Page-----------------------------} */
+
+.facilitiesCardParent {
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.facilitiesCardBgImageContainer1 {
+  background-image: url("../../../../public/icon-bg-1.png");
+  transition: background-image 0.3s ease;
+}
+.facilitiesCardBgImageContainer2 {
+  background-image: url("../../../../public/icon-bg-2.png");
+  transition: background-image 0.3s ease;
+}
+
+.facilitiesCardParent:hover .facilitiesCardBgImageContainer2 {
+  z-index: 10;
+  height: 145px;
+  transition: height 0.3s ease; /* Smooth transition for height property */
+}
+
+.facilitiesCardParent:hover .facilityIcon1 {
+  color: white;
+}
+.facilitiesCardParent:hover .facilityStep1 {
+  color: white;
+}
+.admissionProcStep1:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(0deg, #1471e2, #0551af 100%);
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  transform: scale(0, 0);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.facilitiesCardParent:hover .admissionProcStep1:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(0deg, #1471e2, #0551af 100%);
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.facilityIcon1 {
+  background-image: url("../../../../public/infrastructure-1.png");
+}
+.facilitiesCardParent:hover .facilityIcon1 {
+  background-image: url("../../../../public/infrastructure-1h.png");
+}
+.facilityIcon2 {
+  background-image: url("../../../../public/library-1.png");
+}
+.facilitiesCardParent:hover .facilityIcon2 {
+  background-image: url("../../../../public/library-1h.png");
+}
+.facilityIcon3 {
+  background-image: url("../../../../public/science-1.png");
+}
+.facilitiesCardParent:hover .facilityIcon3 {
+  background-image: url("../../../../public/science-1h.png");
+}
+.facilityIcon4 {
+  background-image: url("../../../../public/computer-1.png");
+}
+
+.facilitiesCardParent:hover .facilityIcon4 {
+  background-image: url("../../../../public/computer-1h.png");
+}
+.facilityIcon5 {
+  background-image: url("../../../../public/sports-1.png");
+}
+
+.facilitiesCardParent:hover .facilityIcon5 {
+  background-image: url("../../../../public/sports-1h.png");
+}
+.facilityIcon6 {
+  background-image: url("../../../../public/transport-1.png");
+}
+
+.facilitiesCardParent:hover .facilityIcon6 {
+  background-image: url("../../../../public/transport-1h.png");
+}
